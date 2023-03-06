@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://fonts.googleapis.com/css?family=GFS Didot' rel='stylesheet'>
+    <link rel="stylesheet" href="index.css">
+    <title>MonsterFella</title>
+</head>
+
+<body>
+
+<!-- 
+    A página ficou com uma margem na parte inferior no qual não tive tempo de consertar. Eu imagino que o problema tenha sido criado pelo form, que vem depois da imagem, porêm, foi movido para seu lado. Uma margem fantasma. Só que ao testar um footer com margem 0, os resultados indicaram o contrario. Portanto, não consigo dizer qual o problema
+-->
+
+    <header>
+
+        <div>
+
+        <img class="monster" src="images/MonsterFella.png" width="70px" height="70px">
+        <h1>MonsterFella</h1>
+        <h2>™</h2>
+        </div>
+
+    </header>
+
+    <script src="Button.js"></script>
+    <!--
+        O script funciona, porêm, por algum motivo, imediatemente o popup fecha sozinho, algo que não é desejado mas não tive tempo de corrigir. Mesmo removendo a função de fechar o botão, o erro continua igual
+    -->
+    
+    <div class="container">
+
+        <img src="images/backIMG.jpg">
+
+        <form>
+            
+            <h1 class="Welcome"> Bem-Vindo!</h1>
+            <label for="PNome">Primeiro Nome</label>
+            <input type="text" value="">
+            <label for="SNome">Sobrenome</label>
+            <input type="text" value="">
+            <label for="email">Email</label>
+            <input type="email" value="">
+            <label for="dataNCM">Data de Nascimento</label>
+            <input type="date" value="">
+            <!--
+                Um botão foi usado sendo que input não aceita imagens dentro de sua caixa
+            -->
+            <button type="submit" class="submitButton" onclick="showErrorPopup()">
+
+                <img src="images/13732.png" width="15px" height="15px" alt="Submit">
+                Criar Conta
+
+            </button>
+
+            <div class="popup" id="popup">
+                <div class="popupContent">
+                    <span class="close" onclick="hideErrorPopup()">x</span>
+                    <p>Erro! Não foi possivel criar est conta pois este síte não existe!</p>
+
+                </div>
+
+            </div>
+
+        </form>
+
+    </div>
+
+</body>
+
+</html>
